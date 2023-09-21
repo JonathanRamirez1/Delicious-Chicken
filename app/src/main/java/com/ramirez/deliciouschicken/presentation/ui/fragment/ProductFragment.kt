@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ramirez.deliciouschicken.R
 import com.ramirez.deliciouschicken.databinding.FragmentProductBinding
 import com.ramirez.deliciouschicken.presentation.ui.adapter.ProductAdapter
 
@@ -22,6 +25,7 @@ class ProductFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpRecyclerView()
+        launchOrderFragment()
     }
 
     private fun setUpRecyclerView() {
@@ -33,9 +37,19 @@ class ProductFragment : Fragment() {
         binding.productRecyclerView.adapter = productAdapter
     }
 
-    private fun updateTotal() {
-        val totalItems = productAdapter.selectedProducts.size
-        binding.totalTextView.text = "Total: $totalItems"
+   private fun updateTotal() {
+        val total = productAdapter.selectedProducts.sumOf { it.price }
+        binding.totalTextView.text = "Total: $$total"
     }
 
+    private fun launchOrderFragment() {
+        binding.proceedToPaymentButton.setOnClickListener {
+            val products = productAdapter.selectedProducts.size
+            if (products >= 1) {
+                findNavController().navigate(R.id.action_productFragment_to_paymentFragment)
+            } else {
+                Toast.makeText(requireContext(), "Añade un producto por lo menos", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
 }

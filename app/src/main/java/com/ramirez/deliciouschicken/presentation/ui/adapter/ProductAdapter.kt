@@ -33,19 +33,22 @@ class ProductAdapter(private val context: Context, private val onProductsUpdated
     inner class ProductViewHolder(private val binding: ItemProductBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(product: Product) {
-            binding.productNameTextView.text = product.name
-            binding.productCodeTextView.text = "Código: ${product.code}"
-            binding.productQuantityTextView.text = "Cantidad disponible: ${product.quantity}"
+            binding.apply {
+                productNameTextView.text = product.name
+                productCodeTextView.text = "Código: ${product.code}"
+                productQuantityTextView.text = "Cantidad disponible: ${product.quantity}"
+                productPriceTextView.text = "Precio: ${product.price}"
 
-            val assets = context.assets
-            val inputStream = product.image?.let { assets.open(it) }
-            val drawable = Drawable.createFromStream(inputStream, null)
-            binding.productImageView.setImageDrawable(drawable)
+                val assets = context.assets
+                val inputStream = product.image?.let { assets.open(it) }
+                val drawable = Drawable.createFromStream(inputStream, null)
+               productImageView.setImageDrawable(drawable)
 
-            binding.productCheckBox.setOnCheckedChangeListener(null)
-            binding.productCheckBox.isChecked = selectedProducts.contains(product)
-            binding.productCheckBox.setOnCheckedChangeListener { _, isChecked ->
-                updateSelectedProducts(product, isChecked)
+               productCheckBox.setOnCheckedChangeListener(null)
+               productCheckBox.isChecked = selectedProducts.contains(product)
+               productCheckBox.setOnCheckedChangeListener { _, isChecked ->
+                    updateSelectedProducts(product, isChecked)
+                }
             }
         }
     }
