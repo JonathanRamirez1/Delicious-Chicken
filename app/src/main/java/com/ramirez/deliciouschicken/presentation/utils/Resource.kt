@@ -1,4 +1,4 @@
-package com.ramirez.deliciouschicken
+package com.ramirez.deliciouschicken.presentation.utils
 
 data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
 

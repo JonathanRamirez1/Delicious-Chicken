@@ -1,10 +1,10 @@
-package com.ramirez.deliciouschicken
+package com.ramirez.deliciouschicken.data.datasource.impl
 
 import android.content.Context
-import android.util.Log
-import at.favre.lib.crypto.bcrypt.BCrypt
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.ramirez.deliciouschicken.domain.model.User
+import com.ramirez.deliciouschicken.data.datasource.LoginDataSource
 import javax.inject.Inject
 
 class LoginDataSourceImpl @Inject constructor(private val context: Context) : LoginDataSource {

@@ -1,4 +1,4 @@
-package com.ramirez.deliciouschicken
+package com.ramirez.deliciouschicken.presentation.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ramirez.deliciouschicken.databinding.FragmentProductBinding
+import com.ramirez.deliciouschicken.presentation.ui.adapter.ProductAdapter
 
 class ProductFragment : Fragment() {
 

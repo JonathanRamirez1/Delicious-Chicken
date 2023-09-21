@@ -1,4 +1,4 @@
-package com.ramirez.deliciouschicken
+package com.ramirez.deliciouschicken.presentation.ui.adapter
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.ramirez.deliciouschicken.databinding.ItemProductBinding
+import com.ramirez.deliciouschicken.domain.model.Product
 
 class ProductAdapter(private val context: Context, private val onProductsUpdated: () -> Unit) :
     RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {

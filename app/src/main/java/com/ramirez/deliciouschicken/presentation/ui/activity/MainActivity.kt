@@ -1,7 +1,8 @@
-package com.ramirez.deliciouschicken
+package com.ramirez.deliciouschicken.presentation.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ramirez.deliciouschicken.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

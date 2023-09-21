@@ -1,4 +1,4 @@
-package com.ramirez.deliciouschicken
+package com.ramirez.deliciouschicken.presentation.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,9 @@ import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.ramirez.deliciouschicken.presentation.viewmodel.LoginViewModel
+import com.ramirez.deliciouschicken.R
+import com.ramirez.deliciouschicken.presentation.utils.Resource
 import com.ramirez.deliciouschicken.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 

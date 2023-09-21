@@ -1,9 +1,12 @@
-package com.ramirez.deliciouschicken
+package com.ramirez.deliciouschicken.presentation.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.ramirez.deliciouschicken.domain.model.User
+import com.ramirez.deliciouschicken.domain.repository.LoginRepository
+import com.ramirez.deliciouschicken.presentation.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package com.ramirez.deliciouschicken
+package com.ramirez.deliciouschicken.domain.model
 
 data class Product(
     val code: String? = null,
