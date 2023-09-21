@@ -1,0 +1,62 @@
+[
+  {
+    "code": "001",
+    "name": "Pollo asado",
+    "quantity": 10,
+    "image": "pollo_asado.jpg"
+  },
+  {
+    "code": "002",
+    "name": "Pollo a la parrilla",
+    "quantity": 12,
+    "image": "pollo_parrilla.jpg"
+  },
+  {
+    "code": "003",
+    "name": "Pollo frito",
+    "quantity": 8,
+    "image": "pollo_frito.jpg"
+  },
+  {
+    "code": "004",
+    "name": "Pollo a la brasa",
+    "quantity": 7,
+    "image": "pollo_asado.jpg"
+  },
+  {
+    "code": "005",
+    "name": "Pollo al curry",
+    "quantity": 10,
+    "image": "pollo_parrilla.jpg"
+  },
+  {
+    "code": "006",
+    "name": "Pollo al horno",
+    "quantity": 9,
+    "image": "pollo_frito.jpg"
+  },
+  {
+    "code": "007",
+    "name": "Pollo al limón",
+    "quantity": 15,
+    "image": "pollo_asado.jpg"
+  },
+  {
+    "code": "008",
+    "name": "Pollo teriyaki",
+    "quantity": 11,
+    "image": "pollo_parrilla.jpg"
+  },
+  {
+    "code": "009",
+    "name": "Pollo al ajo",
+    "quantity": 13,
+    "image": "pollo_frito.jpg"
+  },
+  {
+    "code": "010",
+    "name": "Pollo tikka masala",
+    "quantity": 5,
+    "image": "pollo_parrilla.jpg"
+  }
+]
